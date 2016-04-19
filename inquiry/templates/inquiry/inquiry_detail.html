@@ -1,0 +1,17 @@
+{% extends 'inquiry/base.html' %}
+
+{% block content %}
+    <div class="inquiry">
+        <h1>{{ inquiry.fullname }}</h1>
+        <p>{{ inquiry.service|linebreaks }}</p>
+        <p>{{ inquiry.complaint|linebreaks }}</p>
+        {% if inquiry.date %}
+            <div class="date">
+                {{ inquiry.date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'inquiry_edit' pk=inquiry.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+    </div>
+{% endblock %}
