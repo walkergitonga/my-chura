@@ -5,20 +5,16 @@
     <tr>
         <th>Name</th>
         <th>Phone Number</th>
-        <th>Service Enquiry</th>
         <th>Complaint</th>
 		<th>Status</th>
-        <th>Date</th>
     </tr>
     {% for inquiry in inquiries %}
     <tr>
         <div>
-            <td>{{ inquiry.fullname }}</td>
+            <td><a href="{% url 'inquiry_detail' pk=inquiry.pk %}">{{ inquiry.fullname }}</a></td>
             <td>{{ inquiry.phonenumber }}</td>
-            <td>{{ inquiry.service }}</td>
             <td>{{ inquiry.complaint|linebreaks }}</td>
 			<td>{{ inquiry.status }}</td>
-            <td>{{ inquiry.date }}</td>
         </div>
     </tr>
     {% endfor %}

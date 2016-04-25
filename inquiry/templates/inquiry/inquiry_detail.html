@@ -5,6 +5,7 @@
         <h1>{{ inquiry.fullname }}</h1>
         <p>{{ inquiry.service|linebreaks }}</p>
         <p>{{ inquiry.complaint|linebreaks }}</p>
+        <p>{{ inquiry.status|linebreaks }}</p>
         {% if inquiry.date %}
             <div class="date">
                 {{ inquiry.date }}

@@ -7,6 +7,7 @@
         <th>Phone Number</th>
         <th>Service Enquiry</th>
         <th>Complaint</th>
+        <th>Comment</th>
 		<th>Status</th>
         <th>Date</th>
     </tr>
@@ -17,6 +18,7 @@
             <td>{{ inquiry.phonenumber }}</td>
             <td>{{ inquiry.service }}</td>
             <td>{{ inquiry.complaint|linebreaks }}</td>
+            <td>{{ inquiry.comment|linebreaks }}</td>
 			<td>{{ inquiry.status }}</td>
             <td>{{ inquiry.date }}</td>
         </div>

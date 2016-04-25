@@ -35,11 +35,12 @@ def login(request):
         form = LoginForm()
     return render_to_response('registration/login.html', {'message': message, 'form': form},
                              context_instance=RequestContext(request))
-
+@login_required
 def loggedin(request):
     return render_to_response('registration/loggedin.html',
     	{'username': request.user.username})
 
+@login_required
 def logout(request):
     auth.logout(request)
     return render_to_response('registration/logged_out.html')

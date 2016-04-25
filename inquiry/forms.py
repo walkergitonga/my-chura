@@ -8,3 +8,9 @@ class InquiryForm(forms.ModelForm):
         model = Inquiry
         fields = ('fullname', 'phonenumber', 'service', 
                   'complaint', 'department',)
+
+class ResolveForm(forms.ModelForm):
+
+    class Meta:
+        model = Inquiry
+        fields = ('comment', 'status',)
